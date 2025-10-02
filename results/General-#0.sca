@@ -1,0 +1,47 @@
+version 3
+run General-0-20250201-06:45:42-16136
+attr configname General
+attr datetime 20250201-06:45:42
+attr datetimef 20250201-064542
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network iot.SmartHomeNetwork
+attr processid 16136
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network iot.SmartHomeNetwork
+config sim-time-limit 100s
+
+par SmartHomeNetwork.user typename "\"iot.User\""
+par SmartHomeNetwork.motionSensor typename "\"iot.MotionSensor\""
+par SmartHomeNetwork.tempSensor typename "\"iot.TemperatureSensor\""
+par SmartHomeNetwork.healthMonitor typename "\"iot.HealthMonitor\""
+par SmartHomeNetwork.healthMonitor heartbeat 0bpm
+attr unit bpm
+par SmartHomeNetwork.healthMonitor oxygenLevel 0percentage
+attr unit percentage
+par SmartHomeNetwork.smartLock typename "\"iot.SmartDoor\""
+par SmartHomeNetwork.smartLock openDuration 0seconds
+attr unit seconds
+par SmartHomeNetwork.doorbellSensor typename "\"iot.DoorbellSensor\""
+par SmartHomeNetwork.securityCam typename "\"iot.SecurityCamera\""
+par SmartHomeNetwork.smartLight typename "\"iot.SmartLight\""
+par SmartHomeNetwork.smartThermostat typename "\"iot.SmartThermostat\""
+par SmartHomeNetwork.smartThermostat coLimit 50ppm
+attr unit ppm
+par SmartHomeNetwork.smartThermostat coBaseLevel 10ppm
+attr unit ppm
+par SmartHomeNetwork.smartThermostat coAmplitude 30ppm
+attr unit ppm
+par SmartHomeNetwork.smartThermostat coFrequency 0.1Hz
+attr unit Hz
+par SmartHomeNetwork.centralHub typename "\"iot.CentralHub\""
+par SmartHomeNetwork typename "\"iot.SmartHomeNetwork\""
+
